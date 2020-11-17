@@ -11,6 +11,14 @@ $("button[name=send-info]").click(function (e) {
     addNewUser(parametro)
 });
 
+$(document).keypress(function (e) {
+    if (e.which == 13) {
+        let parametro = $(".search input").val()
+        $(".row-infos").empty()
+        addNewUser(parametro)
+    }
+});
+
 let SendError = document.querySelector(".Send-Error")
 let IconError = document.querySelector(".fa-exclamation-triangle")
 
